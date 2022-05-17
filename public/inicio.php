@@ -1,18 +1,6 @@
 <?php
 
-use Database\Database;
-
-require_once '../src/model/Database.php';
-$db = new Database();
-
-// $db->insert(
-//     "INSERT INTO usuarios(nome, email, senha)
-//     VALUES('Mathias', 'mathias@gmail.com', '1234');"
-// );
-
-?>
-
-<?php require_once "../src/views/header.php"; ?>
+ require_once "../src/views/header.php"; ?>
 
         <hr>
         <div class="login-center">

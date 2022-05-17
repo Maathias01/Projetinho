@@ -1,5 +1,6 @@
 <?php
 
+use Database\Database;
 use Model\Pedido;
 
     require_once "../vendor/autoload.php";
@@ -37,6 +38,8 @@ if( isset($_GET['entrega']) ) {
     $ped->local = null;
 }
 
+$listaItens = null; //variavel para receber a lista de itens e transformar em textinho
+
 ?>
 
 <!DOCTYPE html>
@@ -54,7 +57,12 @@ if( isset($_GET['entrega']) ) {
     <h3> Itens: </h3>
     <?php foreach($ped->itens as $item) : ?>
     <!-- estrutura que se repetirá quantas vezes necessário -->
-        <h5> <?= $item ?> </h5>
+        <h5> 
+            <?php 
+                echo $item;
+                $listaItens .= $item . ',';
+            ?> 
+        </h5>
     <?php endforeach ?>
 
     <h3> Quantidade: </h3>
@@ -65,6 +73,17 @@ if( isset($_GET['entrega']) ) {
 
     <h3> Entrega: </h3>
     <h5> <?= $ped->local ?> </h5> 
-    
+
+<?php
+////////////////////////////////////////////////////////
+require '../src/model/Database.php';
+$db = new Database();
+
+$db->insert(
+    "INSERT INTO pedidos(data_hora, itens, quant, pag, local)
+    VALUES('$ped->dataHora', '$listaItens', $ped->quant, '$ped->pag', '$ped->local'); "
+);
+////////////////////////////////////////////////////////
+?>
 </body>
 </html>
