@@ -1,5 +1,5 @@
 <?php
-
+$SiteName = 'Pagina Incial';
  require_once "../src/views/header.php"; ?>
 
         <hr>

@@ -41,7 +41,6 @@ if( isset($resultDb[0]) ){
         }
     }
 
-
 //Pega o header_nave e joga aqui
 require_once "../src/views/header_nave.php"
 ?>
