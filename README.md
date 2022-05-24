@@ -1,2 +1,2 @@
-# Projetinho
-Projeto do cursinho em sala de aula
+# Projeto feito em aula // FaQI
+
