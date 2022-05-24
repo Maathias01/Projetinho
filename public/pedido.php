@@ -3,12 +3,14 @@
 use Database\Database;
 use Model\Pedido;
 
-    require_once "../vendor/autoload.php";
+require_once "../vendor/autoload.php";
 
+require_once '../src/views/header_nave.php';
     //criando um novo objeto da classe Pedido
     $ped = new Pedido();
 
     
+
 
 // Recebendo ingredientes
 if( isset($_GET['Ingrediente']) ) {
@@ -84,6 +86,8 @@ $db->insert(
     VALUES('$ped->dataHora', '$listaItens', $ped->quant, '$ped->pag', '$ped->local'); "
 );
 ////////////////////////////////////////////////////////
+
+require_once '../src/views/footer.php'
 ?>
 </body>
 </html>

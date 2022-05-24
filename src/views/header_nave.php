@@ -5,6 +5,8 @@
         <link rel="stylesheet" type="text/css" href="assets/css/style.css"/>
         <link rel="stylesheet" type="text/css" href="assets/bootstrap-5.1.3-dist/css/bootstrap.min.css"/>
         <title>Pagina Inicial</title>
+        <!-- Bootstrap CDN -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
         <link rel='icon' href='../public/assets/img/hamburguer.ico' type='image/x-icon'>
     </head>
     

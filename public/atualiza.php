@@ -19,17 +19,17 @@ $resultDb = $db->select(
 
 
 
-<form method='post' action='../src/banco/atualiza_pedido.php'>
+<form method='post' action='../banco/atualiza_pedido.php'>
     <h2>Atualização de pedido</h2>
     <br>
     <h4>Código:</h4>
-    <input type='text' name='cod' value='<?= $resultDb[0]->cod ?>' readonly/>
+    <input type='text' name='cod' value='<?= $resultDb[0]->cod ?>' readonly />
     <h4>Data e Hora:</h4>
-    <input type='text' name='data_hora' value='<?= $resultDb[0]->data_hora ?>' readonly/>
+    <input type='text' name='data_hora' value='<?= $resultDb[0]->data_hora ?>' readonly />
     <h4>Itens:</h4>
-    <input type='text' name='itens' value='<?= $resultDb[0]->itens ?>' readonly/>
+    <input type='text' name='itens' value='<?= $resultDb[0]->itens ?>' />
     <h4>Quantidade:</h4>
-    <input type='text' name='quant' value='<?= $resultDb[0]->quant ?>' readonly/>
+    <input type='text' name='quant' value='<?= $resultDb[0]->quant ?>' min= '1'/>
 
     <h4>Pagamento:</h4>
     <div class="form-check form-check-inline">
@@ -64,3 +64,5 @@ $resultDb = $db->select(
     <input type="reset" value="Reiniciar" class="btn btn-danger" />
 
 </form>
+
+<?php require_once '../src/views/footer.php'; ?>
